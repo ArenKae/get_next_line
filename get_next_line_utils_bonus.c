@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acosi <acosi@student.42nice.fr>            +#+  +:+       +#+        */
+/*   By: acosi <acosi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 10:13:20 by acosi             #+#    #+#             */
-/*   Updated: 2023/04/18 14:27:09 by acosi            ###   ########.fr       */
+/*   Updated: 2025/03/21 19:41:06 by acosi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ char	*ft_strjoin(char *stash, const char *line)
 
 /* Leak management function to free all buffers in a single call. */
 
-char	*free_str(int fd, char *stash[fd], char *line)
+char	*free_str(int fd, char **stash, char *line)
 {
 	free(line);
 	free(stash[fd]);
